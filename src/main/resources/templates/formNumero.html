@@ -6,7 +6,7 @@
   <table>
     <tr>
       <td>Número que quieras:</td>
-      <td><input type="number" th:field="*{numeroInt}" /></td>
+      <td><input type="number" min="-2147483648" max="2147483647" th:field="*{numeroInt}" /></td>
       <td th:if="${#fields.hasErrors('numeroInt')}" th:errors="*{numeroInt}"></td>
     </tr>
     <tr>
