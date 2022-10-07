@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<form th:action="@{/numeroForm}" th:object="${numData}" method="post">
+  <table>
+    <tr>
+      <td>Número que quieras:</td>
+      <td><input type="number" th:field="*{numeroInt}" /></td>
+      <td th:if="${#fields.hasErrors('numeroInt')}" th:errors="*{numeroInt}"></td>
+    </tr>
+    <tr>
+      <td><button type="submit">Enviar</button></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
